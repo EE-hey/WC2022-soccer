@@ -32,6 +32,17 @@ class PlayerController extends Controller
                 ->where('country','=',$country)
                 ->get()
         );
+
+
+    }
+
+    public function showPlayersConsideringCountryTest($country)
+    {
+        return response()->json(
+            DB::table('players')
+                ->where('country','=',$country)
+                ->get()
+        );
     }
 
 }
